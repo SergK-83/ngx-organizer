@@ -1,0 +1,9 @@
+<p>
+  <i class="mdi mdi-arrow-left" (click)="go(-1)"></i>
+
+  <span>
+    {{ date | async | moment }}
+  </span>
+
+  <i class="mdi mdi-arrow-right" (click)="go(1)"></i>
+</p>

@@ -1,1 +1,128 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  --primary-color: #dc3545;
+  --dark-color: #333;
+  --light-color: #f4f4f4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  background-color: #fff;
+  color: var(--dark-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+
+  &:hover {
+    color: #666;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: .4rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  outline: 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 1rem;
+
+  th {
+    background-color: var(--light-color);
+  }
+
+  td, th {
+    border: 1px solid #777;
+    padding: .5rem 1rem;
+  }
+
+  td {
+    text-align: center;
+    transition: all .2s;
+
+    &.disabled {
+      opacity: .5;
+    }
+
+    &:hover:not(.disabled) {
+      background-color: #eee;
+      cursor: pointer;
+    }
+  }
+
+  .active {
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+
+  .selected {
+    color: blue;
+  }
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  padding: .4rem 1.3rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  margin-right: .5rem;
+  transition: opacity .2s;
+
+  &:disabled {
+    background-color: var(--dark-color);
+    color: #fff;
+    cursor: not-allowed;
+  }
+
+  &:hover:not(:disabled) {
+    opacity: .8;
+  }
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.main-header {
+  padding: 1rem 2rem;
+}
+
